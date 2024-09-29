@@ -131,6 +131,7 @@ pub fn (mut context Context) scissor_rect (x int, y int, w int, h int) {
 
 // only for gg compability
 pub fn window_size () &Size {
+	screen_information := get_screen_information()
 	return &Size {
 		width: screen_information.width
 		height: screen_information.height
