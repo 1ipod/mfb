@@ -7,11 +7,8 @@ import gx
 import mouse
 import keyboard
 
-const (
-	screen_information = get_screen_information()
-)
-
 pub fn new_context(args Config) &Context {
+	screen_information := get_screen_information()
 	mut context := &Context{
 		framebuffer:	os.open_file("/dev/fb0","w") or { panic("Unable to open framebuffer device") }
 		width:			screen_information.width
