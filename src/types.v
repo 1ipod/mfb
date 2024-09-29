@@ -21,6 +21,7 @@ pub type Image = vpng.PngFile
 pub type Pixel = vpng.Pixel // extends gg api
 
 pub struct Config {
+pub mut:
 	bg_color		gx.Color
 	user_data		voidptr
 	frame_fn		FNCb	= unsafe { nil }
